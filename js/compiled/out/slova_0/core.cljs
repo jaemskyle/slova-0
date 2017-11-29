@@ -19,7 +19,7 @@
                 (fnn s)))))
 
 (defn get-item [item fn]
-  (let [href (aget js/window "location" "origin")]
+  (let [href (aget js/window "location" "href")]
     (GET (str href item) fn)))
 
 
@@ -136,7 +136,7 @@
 
 (defn testing-element []
   (let [s (str "/json/backup.json")
-        href (aget js/window "location" "origin")]
+        href (aget js/window "location" "href")]
     
     [:div
      [:div (str href s)]
